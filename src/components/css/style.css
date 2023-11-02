@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f3f2ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100vw;
+}
+.box {
+  width: 25vw;
+  height: 50vh;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 3rem Orgba(0, 0, 0, 0.2);
+  background: #a5bbdd;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 0 0 0;
+  text-align: center;
+  transform: translate3d(0, 0, 0);
+  min-width: 20rem;
+  min-height: 35rem;
+}
+
+.inputField {
+  outline: none;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 20px;
+  margin-top: 70px;
+}
+.info {
+  position: relative;
+  top: 127px;
+  color: #3b3b3b;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.location {
+  font-size: 35px;
+}
+.street {
+  margin-right: 6px;
+  width: 1.8rem !important;
+  height: 1.8rem !important;
+}
+.temp {
+  position: relative;
+  top: 50px;
+  color: black;
+}
+.tempmin_max {
+  position: relative;
+  top: 50px;
+  color: black;
+}
+.errormsg {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 25px;
+}
+
+.wave {
+  opacity: 0.3;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  background: white;
+  width: 50rem;
+  height: 50rem;
+  margin-left: -25rem;
+  margin-top: -20rem;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
+  z-index: 1;
+}
+.wave-three {
+  animation: drift 5000ms infinite linear;
+  z-index: 2 !important;
+  opacity: 0.2;
+}
+
+.wave-two {
+  animation: drift 7000ms infinite linear;
+  opacity: 0.1;
+  z-index: 3 !important;
+}
+
+.box:after {
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
