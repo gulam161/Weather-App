@@ -1,10 +1,7 @@
-import { useState } from "react";
-import "./App.css";
+import React from "react";
 
 import Temp from "./components/Temp";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <Temp />
